@@ -13,7 +13,17 @@ class TestController extends Controller
      */
     public function index()
     {
-        return view("home");
+        return view('home');
+    }
+
+    public function register()
+    {
+        return 'Register Page';
+    }
+
+    public function login()
+    {
+        return 'Login Page';
     }
 
 
