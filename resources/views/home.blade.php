@@ -7,10 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    @foreach ($products as $products)
-
-    {{$products}}
+    {{-- @if (count($products))
+    @foreach ($products as $product )
+        {{$product}}
 
     @endforeach
+
+    @else
+    <p>No any product to show!</p>
+    @endif --}}
+
+    @forelse ( $products as $product )
+        {{$product}}
+    @empty
+        <p>No Products</p>
+    @endforelse
 </body>
 </html>
