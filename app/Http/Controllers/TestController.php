@@ -26,5 +26,10 @@ class TestController extends Controller
         return 'Login Page';
     }
 
+    public function products()
+    {
+        $products = ['name'=>'I Phone','price'=>100];
+        return view('home',compact('products'));
+    }
 
 }

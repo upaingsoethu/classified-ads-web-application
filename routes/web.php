@@ -20,11 +20,13 @@ Route::get('/', function () {
 Route::get('/about-us','TestController@index')->name('about');
 
 Route::prefix('account')->group(function () {
-    
+
     Route::get('/register','TestController@register');
 
     Route::get('/login','TestController@login');
 });
+
+Route::get('/products','TestController@products');
 
 
 
