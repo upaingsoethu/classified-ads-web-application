@@ -28,6 +28,10 @@ Route::prefix('account')->group(function () {
 
 Route::get('/products','TestController@products');
 
+Route::get('/test/create','TestController@create');
+
+Route::post('/test/store','TestController@store')->name('data.store');
+
 
 
 

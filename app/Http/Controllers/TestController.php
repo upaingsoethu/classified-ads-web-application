@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 
 class TestController extends Controller
@@ -30,6 +31,16 @@ class TestController extends Controller
     {
         $products = ['name'=>'I Phone','price'=>100];
         return view('home',compact('products'));
+    }
+
+    public function create()
+    {
+        return view('product.create');
+    }
+
+    public function store(Request $request)
+    {
+        dd($request->all());
     }
 
 }
