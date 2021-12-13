@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about-us','TestController@index')->name('about');
+// Route::get('/about-us','TestController@index')->name('about');
 
 Route::prefix('account')->group(function () {
 
