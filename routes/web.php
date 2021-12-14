@@ -33,5 +33,6 @@ Route::get('/test/create','TestController@create');
 Route::post('/test/store','TestController@store')->name('data.store');
 
 
-
+//post
+Route::get('/post/store','PostController@store');
 
