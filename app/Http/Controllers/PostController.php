@@ -31,4 +31,13 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         return $post;
     }
+
+    public function update($id)
+    {
+        // $data = Post::find($id);
+        // $data->title ="Updated Data";
+        // $data->save();
+        // return $data;
+        Post::where('id',$id)->update(['title'=>'hello','body'=>'hello body']);
+    }
 }
