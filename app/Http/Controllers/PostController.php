@@ -13,10 +13,10 @@ class PostController extends Controller
 
     public function index()
     {
-        $data = Post::all()->where('user_id',0);
+        $data = Post::all();
         return $data;
     }
-    public function store()
+    public function create()
     {
 
         Post::create([
@@ -26,11 +26,7 @@ class PostController extends Controller
             'user_id'=>1
         ]);
     }
-    public function show($id)
-    {
-        $post = Post::findOrFail($id);
-        return $post;
-    }
+
 
     public function update($id)
     {
@@ -48,5 +44,11 @@ class PostController extends Controller
 
 
 
+    }
+
+    public function search($id)
+    {
+        $post = Post::where('user_id',1)->first();
+        return $post;
     }
 }

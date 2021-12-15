@@ -36,10 +36,10 @@ Route::post('/test/store','TestController@store')->name('data.store');
 //post
 Route::get('/post','PostController@index');
 
-Route::get('/post/store','PostController@store');
-
-Route::get('/post/{id}','PostController@show');
+Route::get('/post/create','PostController@create');
 
 Route::get('/post/update/{id}','PostController@update');
 
 Route::get('/post/delete/{id}','PostController@delete');
+
+Route::get('/post/search/{id}','PostController@Search');
