@@ -40,4 +40,13 @@ class PostController extends Controller
         // return $data;
         Post::where('id',$id)->update(['title'=>'hello','body'=>'hello body']);
     }
+
+    public function delete($id)
+    {
+        $data = Post::where('id',$id);
+        $data->delete();
+
+
+
+    }
 }
