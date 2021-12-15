@@ -10,6 +10,12 @@ use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
+
+    public function index()
+    {
+        $data = Post::all()->where('user_id',0);
+        return $data;
+    }
     public function store()
     {
 
@@ -19,5 +25,10 @@ class PostController extends Controller
             'slug'=>Str::slug($title),
             'user_id'=>1
         ]);
+    }
+    public function show($id)
+    {
+        $post = Post::findOrFail($id);
+        return $post;
     }
 }
